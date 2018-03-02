@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Dodaj Osobę</title>
+    </head>
+    <h2>Profil Osoby </h2>
+            <body>
+                <table>
+                <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Imię:
+                        <input type="text" name="first_name" >
+                    </label>
+                    <br>
+                    <label>
+                        Nazwisko:
+                        <input type="text" name="last_name" >
+                    </label>
+
+    <h3>Opis</h3>
+                        <input type="text area" name="description" style="height:100px" >
+                    <br>
+                        <input type="submit" value="Dodaj">
+
+                    <br>
+                        <a href="/adres/">Wróć do wszystkich kontaktów</a> <!-- powrot do strony -->
+                    <br>
+
+                </form>
+                </table>
+            </body>
+</html>

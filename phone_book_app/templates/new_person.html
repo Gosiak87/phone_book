@@ -1,0 +1,33 @@
+<html>
+
+<body>
+<h1>Nowa osoba</h1>
+
+    <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Imię: {{new_person.first_name }}
+                    </label>
+                    <br>
+                    <label>
+                        Nazwisko: {{ new_person.last_name }}
+                    </label>
+                    <br>
+                     <label>
+                        Opis: {{ new_person.description }}
+                    </label>
+                    <br>
+
+
+        <a href="/modify/{{ new_person.id }}/">Edytuj kontakt</a>
+        <br>
+>
+        <a href="/adres/">Wróć do wszystkich kontaktów</a>
+        <br>
+
+
+
+
+
+</body>
+</html>

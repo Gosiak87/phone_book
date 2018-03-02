@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Osoba</title>
+    </head>
+    <h2>Osoba </h2>
+            <body>
+                <table>
+                <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Imię: {{ person.first_name }}
+                    </label>
+                    <br>
+                    <label>
+                        Nazwisko: {{ person.last_name }}
+                    </label>
+                    <br>
+                    <label>
+                        Adres: {{ adres.city }} {{ adres.street }} {{ adres.number_house }} {{ adres.number_flat }}
+                    </label>
+                    <br>
+                    <label>
+                        Phone: {{ phone.type_phone }} {{ phone.number_phone }}
+                    </label>
+                    <br>
+                    <label>
+                        Email: {{ email.type_email }} {{ email.address_email }}
+                    </label>
+                    <br>
+                    <label>
+                        Opis: {{ person.description }}
+                    </label>
+                    <br>
+
+                        <a href="/modify/{{ person.id }}/">Edytuj kontakt</a>
+
+                    <br>
+                        <a href="/adres/">Wróć do wszystkich kontaktów</a>
+                    <br>
+                </form>
+                </table>
+            </body>
+</html>
+

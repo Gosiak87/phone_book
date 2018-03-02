@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Dodaj Adres</title>
+    </head>
+    <h2>Dodaj Adres</h2>
+            <body>
+                <table>
+                <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Miasto:
+                        <input type="text" name="city" >
+                    </label>
+                    <br>
+                    <label>
+                        Ulica:
+                        <input type="text" name="street"  >
+                    </label>
+                    <br>
+                    <label>
+                        Numer domu:
+                        <input type="text" name="number_house"  >
+                    </label>
+                    <br>
+                     <label>
+                        Numer mieszkania:
+                        <input type="text" name="number_flat" >
+                    </label>
+                    <br>
+                        <input type="submit" value="Dodaj">
+                    <br>
+                    <br>
+                        <a href="/adres/">Wróć do wszystkich kontaktów</a>
+                    <br>
+
+                </form>
+                </table>
+            </body>
+</html>

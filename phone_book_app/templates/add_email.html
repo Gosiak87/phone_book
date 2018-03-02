@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Dodaj Email</title>
+    </head>
+    <h2>Dodaj Email</h2>
+            <body>
+                <table>
+                <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Typ emaila
+                        <input type="text" name="type_email" >
+                    </label>
+                    <br>
+                    <label>
+                        Adres email
+                        <input type="email" name="address_email" >
+                    </label>
+                    <br>
+
+                        <input type="submit" value="Dodaj">
+                    <br>
+
+                </form>
+                </table>
+            </body>
+</html>

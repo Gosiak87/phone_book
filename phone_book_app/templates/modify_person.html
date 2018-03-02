@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Edytuj Osobę</title>
+    </head>
+    <h2>Edytuj Osobę </h2>
+            <body>
+                <table>
+                <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Imię:
+                        <input type="text" name="first_name" value ="{{ person.first_name }}" >
+                    </label>
+                    <br>
+                    <label>
+                        Nazwisko:
+                        <input type="text" name="last_name" value ="{{ person.last_name }}" >
+                    </label>
+                    <br>
+                    <label>
+                        Opis:
+
+                        <input type="text" name="description" value="{{ person.description }}" >
+                    </label>
+                    <br>
+
+                         <h3>  Adres: </h3>
+                     <label>
+
+                        Miasto:
+                        <input type="text" name="city" value="{{ address.city}}" >
+                    </label>
+                    <br>
+                    <label>
+
+                        Ulica:
+                        <input type="text" name="street" value="{{ address.street}}" >
+                    </label>
+                    <br>
+                    <label>
+
+                        Numer domu:
+                        <input type="text" name="number_house" value="{{ address.number_house}}" >
+                    </label>
+                    <br>
+                    <label>
+
+                        Numer mieszknia:
+                        <input type="text" name="number_flat" value="{{ address.number_flat}}" >
+                    </label>
+                    <br>
+                      <label>
+
+                        Adres email:
+                        <input type="text" name="address_email" value="{{ address_email.address_email}}" >
+                    </label>
+                    <br>
+                      <label>
+
+                        Numer Ttelefonu:
+                        <input type="text" name="number_phone" value="{{ number_phone.number_phone}}" >
+                    </label>
+                    <br>
+
+
+                        <input type="submit" value="Edytuj">
+                    <br>
+                    <a href="/modify/{{ person.id }}/addAddress/">Dodaj adres</a> <!-- powrot do strony -->
+                    <br>
+                    <br>
+                    <a href="/modify/{{ person.id }}/addEmail/">Dodaj email</a>
+                    <br>
+                    <br>
+                    <a href="/modify/{{ person.id }}/addPhone/">Dodaj telefon</a>
+                    <br>
+
+                    <a href="/adres/">Wróć do wszystkich kontaktów </a>
+                    <br>
+
+                </form>
+                </table>
+            </body>
+</html>

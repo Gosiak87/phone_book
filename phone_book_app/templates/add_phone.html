@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Dodaj Telefon</title>
+    </head>
+    <h2>Dodaj Telefon</h2>
+            <body>
+                <table>
+                <form action="#" method="POST">
+                   {% csrf_token %}
+                    <label>
+                        Typ telefonu
+                        <input type="text" name="type_phone" >
+                    </label>
+                    <br>
+                    <label>
+                        Numer Telefonu
+                        <input type="text" name="number_phone" >
+                    </label>
+                    <br>
+
+                        <input type="submit" value="Dodaj">
+                    <br>
+
+                </form>
+                </table>
+            </body>
+</html>

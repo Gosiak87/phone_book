@@ -1,0 +1,22 @@
+<html>
+
+<body>
+<h1>Moje kontakty</h1>
+
+    {% for person in persons %}
+
+
+        <a href="/show/{{ person.id }}" style="font-size:27px"> <li>{{ person.first_name }} {{ person.last_name }}</a>
+
+                        <a href="/modify/{{ person.id }}/">Edytuj kontakt</a>
+
+        <a href="/delete/{{ person.id }}/">Usuń kontakt</a></body></li>
+
+                {% endfor %}
+
+<br>
+<a href="/new/"> Dodaj nową osobę </a>
+
+
+</body>
+</html>
