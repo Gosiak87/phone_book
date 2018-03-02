@@ -24,8 +24,17 @@ class AddPerson(View):
 
 class ModifyPerson(View):
     def get(self, request, id):
-        person = Person.objects.get(id=id)   # wyciagnelam konkretny obiekt po id = id
-        return render(request, "modify_person.html", {"person": person}, {"adress"})
+        person = Person.objects.get(id=id)
+        # address_id = person.person_address_id
+        # address = Address.objects.get(id=address_id)
+        #
+        # email_id = person.person_email_id
+        # address_email = Email.objects.get(id=email_id)
+
+        # phone_id = person.person_phone_id
+        # number_phone = Phone.objects.get(id=phone_id)
+        # wyciagnelam konkretny obiekt po id = id
+        return render(request, "modify_person.html", {"person": person}) # "address": address, "address_email": address_email , "number_phone": number_phone})
 
     def post(self, request, id):
         person = Person.objects.get(id=id)
