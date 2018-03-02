@@ -6,8 +6,8 @@ from django.db import models
 class Address(models.Model):
     city = models.CharField(max_length=128)
     street = models.CharField(max_length=128)
-    number_house = models.IntegerField(null=True)
-    number_flat = models.IntegerField(null=True)
+    number_house = models.CharField(max_length=65, null=True)
+    number_flat = models.CharField(max_length=65, null=True)
 
 
 class Phone(models.Model):
@@ -18,7 +18,7 @@ class Phone(models.Model):
     )
 
     type_phone = models.IntegerField(choices=TYPE_PHONE, default=2)
-    number_phone = models.IntegerField(null=True)
+    number_phone = models.CharField(max_length=65, null=True)
 
 class Email(models.Model):
     TYPE_EMAIL = (
@@ -27,7 +27,7 @@ class Email(models.Model):
     )
 
     type_email = models.IntegerField(choices=TYPE_EMAIL, default=1)
-    address_email = models.CharField(max_length=25, null=True)
+    address_email = models.EmailField(max_length=25, null=True)
 
 
 class Groups(models.Model):

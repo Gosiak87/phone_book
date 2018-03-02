@@ -25,7 +25,7 @@ class AddPerson(View):
 class ModifyPerson(View):
     def get(self, request, id):
         person = Person.objects.get(id=id)   # wyciagnelam konkretny obiekt po id = id
-        return render(request, "modify_person.html", {"person": person})
+        return render(request, "modify_person.html", {"person": person}, {"adress"})
 
     def post(self, request, id):
         person = Person.objects.get(id=id)
