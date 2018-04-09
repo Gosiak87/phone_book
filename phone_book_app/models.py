@@ -20,6 +20,7 @@ class Phone(models.Model):
     type_phone = models.IntegerField(choices=TYPE_PHONE, default=2)
     number_phone = models.CharField(max_length=65, null=True)
 
+
 class Email(models.Model):
     TYPE_EMAIL = (
         (0, "prywatny"),
@@ -30,10 +31,6 @@ class Email(models.Model):
     address_email = models.EmailField(max_length=25, null=True)
 
 
-class Groups(models.Model):
-    name = models.CharField(max_length=128)
-
-
 class Person(models.Model):
     first_name = models.CharField(max_length=128)
     last_name = models.CharField(max_length=128)
@@ -41,4 +38,3 @@ class Person(models.Model):
     person_address = models.ForeignKey(Address, on_delete=models.CASCADE, null=True)
     person_email = models.ForeignKey(Email, on_delete=models.CASCADE, null=True)
     person_phone = models.ForeignKey(Phone, on_delete=models.CASCADE, null=True)
-    group = models.ManyToManyField(Groups)

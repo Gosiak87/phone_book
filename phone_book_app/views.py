@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
-from phone_book_app.models import Address, Person, Phone, Email, Groups
+from phone_book_app.models import Address, Person, Phone, Email
 
 # Create your views here.
 
@@ -61,7 +61,6 @@ class ModifyPerson(View):
         req_8 = request.POST.get("address_email")
         req_9 = request.POST.get("number_phone")
 
-
         if req_1 in request.POST["first_name"]:
             person.first_name = req_1
             person.save()
@@ -89,7 +88,6 @@ class ModifyPerson(View):
         if req_9 in request.POST["number_phone"]:
             number_phone.number_phone = req_9
             number_phone.save()
-
 
         return HttpResponse("Zedytowano osobę")
 
